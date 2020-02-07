@@ -4,9 +4,11 @@
 $(document).ready(function() {
 	initializePage();
 })
-$("#hi").click(listenerFunction){
-	preventDefault();
-	$(this).text(anagrammedName(name));
+$("a").click(clickListener);
+function clickListener(e){
+    e.preventDefault();
+	var oldName = $(this).text();
+	$(this).text(anagramName(oldName))
 }
 
 /*
